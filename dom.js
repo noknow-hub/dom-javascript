@@ -258,4 +258,4 @@ class Dom {
     }
 
 }
-export { Dom }
+export { Dom };
