@@ -90,7 +90,7 @@ class Dom {
     //////////////////////////////////////////////////////////////////////
     // Set attribute list.
     // @params:
-    //     attrList: Array: e.g. [{ name1: 'NAME1', value1: 'VALUE1' }, { name2: 'NAME2', value2: 'VALUE2' }]
+    //     attrList: Array: e.g. [{ name: 'NAME1', value: 'VALUE1' }, { name: 'NAME2', value: 'VALUE2' }]
     //////////////////////////////////////////////////////////////////////
     SetAttrList(attrList) {
         if(attrList == null || attrList.length === 0) {
@@ -109,7 +109,7 @@ class Dom {
     //////////////////////////////////////////////////////////////////////
     // Set attribute list to the specified element.
     // @params:
-    //     attrList: Array: e.g. [{ name1: 'NAME1', value1: 'VALUE1' }, { name2: 'NAME2', value2: 'VALUE2' }]
+    //     attrList: Array: e.g. [{ name: 'NAME1', value: 'VALUE1' }, { name: 'NAME2', value: 'VALUE2' }]
     //     specifiedElm: Object: The specified HTML element.
     //////////////////////////////////////////////////////////////////////
     SetAttrListToSpecifiedElm(attrList, specifiedElm) {
@@ -159,7 +159,7 @@ class Dom {
     //     contentList: Array: e.g. ["TEXT_A", "CLASS_B", HTML_ELEMENT_A].
     //////////////////////////////////////////////////////////////////////
     SetContentList(contentList) {
-        if(contentList != null && contentList.length > 0) {
+        if(contentList == null || contentList.length === 0) {
             return this;
         }
         for(let i = 0; i < contentList.length; i++) {
@@ -181,7 +181,7 @@ class Dom {
     //     specifiedElm: Object: The specified HTML element.
     //////////////////////////////////////////////////////////////////////
     SetContentListToSpecifiedElm(contentList, specifiedElm) { 
-        if(contentList != null && contentList.length > 0) {
+        if(contentList == null || contentList.length === 0) {
             return this;
         }
         for(let i = 0; i < contentList.length; i++) {
